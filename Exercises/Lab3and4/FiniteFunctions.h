@@ -1,7 +1,7 @@
 #include <string>
 #include <vector>
 #include "gnuplot-iostream.h"
-
+//header file change
 #pragma once //Replacement for IFNDEF
 
 class FiniteFunction{

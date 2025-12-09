@@ -16,8 +16,13 @@ TestFiniteFunctions.o : TestFiniteFunctions.cxx FiniteFunctions.h
 FiniteFunctions.o : FiniteFunctions.cxx FiniteFunctions.h
 	${CC} ${FLAGS} ${LIBS} -c FiniteFunctions.cxx
 
+<<<<<<< HEAD
 #CustomFunctions.o : CustomFunctions.cxx
 #	${CC} ${FLAGS} ${LIBS} -c CustomFunctions.cxx
+=======
+CustomFunctions.o : CustomFunctions.cxx CustomFunctions.h
+	${CC} ${FLAGS} ${LIBS} -c CustomFunctions.cxx
+>>>>>>> 202c2a6 (Assignment 2 submission Richarnie)
 	
 #CalculatePi.o : CalculatePi.cxx
 #	${CC} ${FLAGS} ${LIBS} -c CalculatePi.cxx

@@ -62,8 +62,18 @@ Integration by hand (output needed to normalise function when plotting)
 ###################
 */ 
 double FiniteFunction::integrate(int Ndiv){ //private
-  //ToDo write an integrator
-  return -99;  
+  double range = m_RMax - m_RMin;
+  double step = range/(double) Ndiv;
+  double integral = 0.;
+  for(int i = 0; i < Ndiv-1; i++){
+    //sum over parallelograms going over the range stated in the function
+
+    double h_1 = callFunction(m_RMin + i*step);
+    double h_2 = callFunction(m_RMin + (i+1)*step);
+    double integral_step = (step/2)*(h_1 + h_2);
+    integral += integral_step;
+  }
+  return integral;  
 }
 double FiniteFunction::integral(int Ndiv) { //public
   if (Ndiv <= 0){
